@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Turismo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+</head>
+
+<body>
+    <div id="header"></div>
+s
+    <script src="../js/footer_header.js"></script>
+
+    <main class="p-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="comments-container">
+            <div class="bg-white p-4 rounded-lg shadow">
+                <p class="font-bold">@ANONIMO</p>
+                <p>Me encantó mucho el visitar Panaca, fueron experiencias únicas con mi familia</p>
+                <div class="text-yellow-500">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow">
+                <p class="font-bold">@ANAMORALES</p>
+                <p>El parque del café es genial, sin duda lo visitaré muchas veces.</p>
+                <div class="text-yellow-500">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow">
+                <p class="font-bold">@LUISMOLLEJA</p>
+                <p>Mis hijos disfrutaron mucho del museo, habían cosas demasiado antiguas, las cuales nos recordaron nuestros orígenes</p>
+                <div class="text-yellow-500">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow">
+                <p class="font-bold">@MAFERLI</p>
+                <p>Mi pareja y yo no ha encantado el museo de oro, es grandioso.</p>
+                <div class="text-yellow-500">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow">
+                <p class="font-bold">@NAMENDEZ</p>
+                <p>Podría tener mejores temáticas el parque de la feria, pero sin duda es un buen lugar</p>
+                <div class="text-yellow-500">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow">
+                <p class="font-bold">@LUPOKIA</p>
+                <p>El Zoológico de cali en grandioso, bueno, menos por el calor y que se siente siempre.</p>
+                <div class="text-yellow-500">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow">
+                <p class="font-bold">@RONOVALENCIA</p>
+                <p>La piedra del peñol tiene una vista genial, como para ir con la familia y ver todo desde el mejor ángulo</p>
+                <div class="text-yellow-500">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow flex flex-col items-center justify-center">
+                <img alt="Illustration of people giving reviews" class="mb-4" height="150" src="https://storage.googleapis.com/a1aa/image/Nfwh4kjKy10nca1Ku326xePVt7v3UyAqgQyFXE5JUBfhuCFoA.jpg" width="150"/>
+                <button class="bg-green-500 text-white p-2 rounded-full" onclick="openCommentModal()">Dejar una opinión</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="commentModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+            <h2 class="text-xl mb-4">Dejar una opinión</h2>
+            <input id="username" class="w-full p-2 mb-4 border rounded" placeholder="Nombre de usuario" type="text"/>
+            <textarea id="comment" class="w-full p-2 mb-4 border rounded" placeholder="Escribe tu comentario"></textarea>
+            <div class="flex justify-between items-center mb-4">
+                <span>Calificación:</span>
+                <div id="rating" class="text-yellow-500">
+                    <i class="fas fa-star cursor-pointer" onclick="setRating(1)"></i>
+                    <i class="fas fa-star cursor-pointer" onclick="setRating(2)"></i>
+                    <i class="fas fa-star cursor-pointer" onclick="setRating(3)"></i>
+                    <i class="fas fa-star cursor-pointer" onclick="setRating(4)"></i>
+                    <i class="fas fa-star cursor-pointer" onclick="setRating(5)"></i>
+                </div>
+            </div>
+            <button class="bg-blue-500 text-white p-2 rounded" onclick="submitComment()">Enviar</button>
+            <button class="bg-red-500 text-white p-2 rounded mt-2" onclick="closeCommentModal()">Cancelar</button>
+        </div>
+    </div>
+    
+    <script>
+        let currentRating = 0;
+    
+        function openCommentModal() {
+            document.getElementById('commentModal').classList.remove('hidden');
+        }
+    
+        function closeCommentModal() {
+            document.getElementById('commentModal').classList.add('hidden');
+        }
+    
+        function setRating(rating) {
+            currentRating = rating;
+            const stars = document.querySelectorAll('#rating .fa-star');
+            stars.forEach((star, index) => {
+                if (index < rating) {
+                    star.classList.add('text-yellow-500');
+                    star.classList.remove('text-gray-300');
+                } else {
+                    star.classList.add('text-gray-300');
+                    star.classList.remove('text-yellow-500');
+                }
+            });
+        }
+    
+        function submitComment() {
+            const username = document.getElementById('username').value;
+            const comment = document.getElementById('comment').value;
+    
+            if (username && comment && currentRating > 0) {
+                const commentContainer = document.createElement('div');
+                commentContainer.classList.add('bg-white', 'p-4', 'rounded-lg', 'shadow');
+    
+                const usernameElement = document.createElement('p');
+                usernameElement.classList.add('font-bold');
+                usernameElement.textContent = `@${username}`;
+                commentContainer.appendChild(usernameElement);
+    
+                const commentElement = document.createElement('p');
+                commentElement.textContent = comment;
+                commentContainer.appendChild(commentElement);
+    
+                const ratingElement = document.createElement('div');
+                ratingElement.classList.add('text-yellow-500');
+                for (let i = 0; i < currentRating; i++) {
+                    const star = document.createElement('i');
+                    star.classList.add('fas', 'fa-star');
+                    ratingElement.appendChild(star);
+                }
+                commentContainer.appendChild(ratingElement);
+    
+                document.getElementById('comments-container').appendChild(commentContainer);
+    
+                closeCommentModal();
+            } else {
+                alert('Por favor, completa todos los campos y selecciona una calificación.');
+            }
+        }
+    </script>
+    
+    
+    
+    
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Turismo</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+</head>
+
+<body class="bg-gray-100">
+    <div id="header"></div>
+    <main class="flex justify-center items-center py-10">
+        <div class="relative w-full max-w-4xl bg-white p-6 rounded-lg shadow-lg">
+            <div class="absolute left-0 top-0 w-1/2 h-full flex items-center justify-center">
+                <img alt="Illustration of a smartphone and a calendar with a check mark" class="h-64" height="300"
+                    src="https://storage.googleapis.com/a1aa/image/shIK5ij3QNpfICx8sphl8TCnbI5fpKPILy8WgeGeeJ7oWJUgC.jpg"
+                    width="300" />
+            </div>
+            <div class="ml-auto w-1/2 p-6 bg-gray-100 rounded-lg">
+                <h2 class="text-lg font-bold mb-4">
+                    Destino seleccionado:
+                    <span class="font-normal">
+                        Panaca, Armenia Quindio
+                    </span>
+                </h2>
+                <div class="mb-4">
+                    <label class="block text-sm font-bold mb-2" for="travel-dates">
+                        Fechas de viaje:
+                    </label>
+                    <input class="w-full p-2 border rounded" id="travel-dates" placeholder="Seleccione una fecha" type="text" />
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-bold mb-2" for="travelers">
+                        Número de viajeros:
+                    </label>
+                    <input class="w-full p-2 border rounded" id="travelers" placeholder="4 personas" type="text" />
+                </div>
+                <div class="mb-4">
+                    <p class="text-lg font-bold">
+                        Total a cancelar:
+                        <span class="font-normal">
+                            $276,000
+                        </span>
+                    </p>
+                </div>
+                <div class="flex items-center space-x-4 mb-4">
+                    <span class="text-sm font-bold">
+                        Métodos de pago:
+                    </span>
+                    <img alt="Visa logo" class="h-5" src="https://storage.googleapis.com/a1aa/image/BvTxljNu9zJVDRpf6ghznleCD4HGXeCPEwdTgU4W8mqnVCFoA.jpg" />
+                    <img alt="MasterCard logo" class="h-5" src="https://storage.googleapis.com/a1aa/image/0ouRweyH3cUoR6o4LaNKH5NBs0QCl3f9eRJS3zv14VemrEKQB.jpg" />
+                    <img alt="PayPal logo" class="h-5" src="https://storage.googleapis.com/a1aa/image/Zcde6NwKkazaYSZhW9SLZ5vv4ec9fjSlLXSP2hr5VDp3VCFoA.jpg" />
+                </div>
+                <button class="w-full bg-blue-600 text-white p-2 rounded">
+                    Cancelar ahora
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pikaday JS -->
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script>
+        // Inicializar el calendario interactivo con Pikaday
+        const picker = new Pikaday({
+            field: document.getElementById('travel-dates'),
+            format: 'YYYY-MM-DD',
+            onSelect: function (date) {
+                alert('Fecha seleccionada: ' + date.toISOString().split('T')[0]);
+            }
+        });
+    </script>
+    <script src="../js/footer_header.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Turismo</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <main class="container mx-auto flex flex-col md:flex-row justify-between items-start py-8 px-4">
+        
+        <div class="flex flex-col items-center md:items-start md:w-1/2">
+            <img alt="Globe with medical kit" class="mb-4" height="200"
+                src="https://storage.googleapis.com/a1aa/image/OLFW4QfaOwUlVilEaoIdFQACF41UcDQGumfEDE4a9uyidhCUA.jpg"
+                width="200" />
+            <p class="text-center md:text-left mb-4">
+                ¡Síguenos en nuestras redes!
+            </p>
+            <div class="flex space-x-4 mb-4">
+                <a href="#">
+                    <i class="fab fa-whatsapp text-green-500 text-2xl">
+                    </i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-facebook text-blue-600 text-2xl">
+                    </i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram text-pink-500 text-2xl">
+                    </i>
+                </a>
+            </div>
+            <div class="text-center md:text-left">
+                <p>
+                    Bogotá
+                </p>
+                <p>
+                    (601) 405 6708
+                </p>
+                <p>
+                    Línea Nacional
+                </p>
+                <p>
+                    01 8000 45 45 11
+                </p>
+                <p>
+                    Sede principal - Bogotá
+                </p>
+                <p>
+                    Calle 34a #05-79
+                </p>
+            </div>
+        </div>
+        <!-- Right Section -->
+        <div class="bg-gray-200 p-6 rounded-md shadow-md md:w-1/2">
+            <form>
+                <div class="mb-4">
+                    <label class="block mb-2" for="name">
+                        Nombre:
+                    </label>
+                    <input class="w-full p-2 border rounded-md" id="name" type="text" />
+                </div>
+                <div class="mb-4">
+                    <label class="block mb-2" for="email">
+                        Correo:
+                    </label>
+                    <input class="w-full p-2 border rounded-md" id="email" type="email" />
+                </div>
+                <div class="mb-4">
+                    <label class="block mb-2" for="subject">
+                        Asunto:
+                    </label>
+                    <input class="w-full p-2 border rounded-md" id="subject" type="text" />
+                </div>
+                <div class="mb-4">
+                    <label class="block mb-2" for="message">
+                        Mensaje:
+                    </label>
+                    <textarea class="w-full p-2 border rounded-md h-32" id="message"></textarea>
+                </div>
+                <button class="bg-blue-600 text-white px-4 py-2 rounded-md" type="submit">
+                    Enviar mensaje
+                </button>
+            </form>
+        </div>
+    </main>
+
+
+
+
+
+    <script src="../js/footer_header.js"></script>
+</body>
+
+</html>
